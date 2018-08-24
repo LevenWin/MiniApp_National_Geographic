@@ -1,0 +1,12 @@
+<view class = "container">
+  <tab bind:tapTab='tapTab' tabs = "{{['推荐','摄影','视频','活动']}}" selectedIndex = "{{currentIndex}}"></tab>
+  <view class='content'>
+    <swiper class='swiper' duration="{{300}}" bindchange="bindchange" current="{{currentIndex}}">
+      <block wx:for="{{dataList}}" wx:key="id">
+        <swiper-item>
+          <article-list itemObj="{{item}}"></article-list>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

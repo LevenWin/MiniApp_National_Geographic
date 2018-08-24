@@ -1,0 +1,48 @@
+
+<scroll-view class='container' scroll-y bindscrolltolower='loadMore' bindscrolltoupper='refreshData' >
+  <block wx:if="{{!isPic}}">
+    <block wx:if="{{banners.length>0}}">  
+      <view class='swiper-container'>
+          <swiper class='swiper' circular autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}" bindchange='bannerChange'>
+            <block wx:for="{{banners}}" wx:key="id">
+              <swiper-item class='image'>
+                <image mode= "aspectFill" src="{{item.fileBrowseUrl}}" bindtap='bannerTap' data-id="{{item.url}}" class='banner-image'></image>
+              </swiper-item>
+            </block>
+          </swiper>
+          <view class='banner-info'>
+            <text class='banner-info-text'>{{banners[bannerIndex].name}}</text>
+            <text class='banner-info-index'>{{bannerIndex + 1}}/{{banners.length}}</text>
+          </view>
+      </view>
+    </block>
+    <view class='article-list'>
+      <block wx:for="{{articles}}" wx:key="articleId">
+        <block wx:if="{{index == articles.length - 1}}">
+          <view class='load-more'>
+            {{loadMoreString}}
+          </view>
+        </block>
+        <block wx:else>
+          <view class='cell'>
+            <article-cell cellItem="{{item}}" hideBottomLine="{{index == articles.length }}">
+            </article-cell>
+          </view>
+        </block>
+      </block>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class='image-list'>
+      <view class='image-box' wx:for="{{articles}}" wx:key="id">
+        <image mode="aspectFill"  src="{{item.fileBrowseUrl}}" class="{{index%2 ? 'right-image':'left-image'}}"></image>
+      </view>
+    </view>
+    <view class='load-more'>
+      {{loadMoreString}}
+    </view>
+  </block>
+</scroll-view>
+
+

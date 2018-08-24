@@ -1,0 +1,13 @@
+/* pages/component/listView/list.wxss */
+.item {
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid silver;
+}
+
+scroll-view {
+   height: 100%;
+}

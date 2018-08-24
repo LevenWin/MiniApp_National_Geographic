@@ -1,0 +1,82 @@
+/* pages/home/component/articleCell/articleCell.wxss */
+
+.container {
+  height: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+.top-bottom {
+  height: 100%;
+  width: 100%;
+}
+
+.top {
+  height: 70%;
+  width: 100%;
+  display: block;
+}
+
+.bottom {
+  height: 30%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 16px;
+  color: #333;
+}
+.pub-day {
+  font-size: 12px;
+  color: #666;
+}
+
+.left-right {
+  height: 280rpx;
+  display: flex;
+  flex-direction:row-reverse;
+  width: 100%;
+}
+
+.left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 55%;
+  padding: 10rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.left text {
+  display: block;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+}
+
+.right {
+  width: 45%;
+  padding-top: 10rpx;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1rpx;
+  background: rgb(155, 154, 154);
+}
+
+.hidden {
+  display: none;
+}
+
+.hover {
+  background: rgb(241, 240, 240);
+}

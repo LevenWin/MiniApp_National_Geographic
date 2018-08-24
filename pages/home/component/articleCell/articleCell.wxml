@@ -1,0 +1,26 @@
+<view class='container' hover-class='hover'>
+  <block wx:if="{{ifBigPic}}">
+    <view class='top-bottom'>
+      <view class='top'>
+        <image src="{{cellItem.logoBrowseUrl}}" mode="aspectFill"></image>
+      </view>
+      <view class='bottom'>
+        <text class='title'>{{cellItem.articleTitle}}</text>
+        <text class='pub-day'>{{cellItem.pubDay}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='left-right'>
+      <view class='right'>
+        <image mode="aspectFill" src="{{cellItem.logoBrowseUrl}}" ></image>
+      </view>
+      <view class='left'>
+        <text class='title'>{{cellItem.articleTitle}}</text>
+        <text class='pub-day'>{{cellItem.pubDay}}</text>
+      </view>
+    </view>
+  </block>
+  <view class="line {{hideBottomLine ? 'hidden':''}}"></view>
+</view>
+

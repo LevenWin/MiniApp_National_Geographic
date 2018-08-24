@@ -1,0 +1,33 @@
+/* pages/home/home.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+tab {
+  width: 100%;
+  height: 100rpx;
+}
+
+.content {
+  position: absolute;
+  padding-top: 100rpx;
+  box-sizing: border-box;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.swiper-item {
+  width: 100%;
+  height: 100%;
+}

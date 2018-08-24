@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "article-list":"component/articleCell/article-list",
+    "tab": "../component/tab/tab",
+    "list-view": "../component/listView/list"
+  },
+  "enablePullDownRefresh": true
+}
