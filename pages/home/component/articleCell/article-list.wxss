@@ -58,7 +58,6 @@
 .cell {
   position: relative;
   width: 100%;
-  height: 280rpx;
 }
 
 .image-list {

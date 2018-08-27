@@ -47,7 +47,9 @@ Component({
         bannerIndex: e.detail.current
       })
     },
-
+    tapAction(e){
+      this.triggerEvent('clickItem',e.currentTarget.dataset)
+    },
     loadMore: function(){
       console.log(this);
       if (this.data.isLoading) return;

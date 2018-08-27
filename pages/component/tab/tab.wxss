@@ -24,13 +24,11 @@
 
 .tab-item {
   height: 100%;
-  width: 25%;
+  flex: 1;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
   line-height: 100rpx;
   align-items: center;
-
 }
 .tab-item text {
   display: block;
@@ -38,6 +36,7 @@
   font-size: 16px;
   color: #333;
   width: 80%;
+  height: 100%;
   box-sizing: border-box;
 }
 

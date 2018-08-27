@@ -1,0 +1,61 @@
+/* pages/mine/mine.wxss */
+.main {
+  height: 100%;
+}
+.header {
+  height: 350rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 10px solid #eee;
+}
+
+.header image {
+  position: relative;
+  top: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  background-color: silver;
+}
+.login-info {
+  position: relative;
+  top: 40rpx;
+  font-size: 16px;
+}
+
+.login-info text {
+  padding: 0 10rpx;
+}
+
+.item-content {
+  font-size: 16px;
+  color: #333;
+  height: 100rpx;
+  align-items: center;
+  display: flex;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.item text {
+  width: 100%; 
+}
+.arrow {
+  display: absolute;
+  margin-right: 30rpx;
+  right: 30rpx;
+  top: 15rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-color:#ccc;
+  border-width: 0 0 2px 2px;
+  border-style: solid;
+  transform:rotateZ(-135deg);  
+}
+
+.hover {
+  background-color: #eee;
+}
+

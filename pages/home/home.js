@@ -26,8 +26,10 @@ Page({
           winHeight:res.windowHeight
         })
       },
+    }) ;
+    wx.setNavigationBarTitle({
+      title: '首页'
     })
-
   },
 
   tapTab:function(e) {
@@ -39,6 +41,13 @@ Page({
     this.setData({
       currentIndex: e.detail.current
     })
+  },
+  clickItem :function(e) {
+    wx.navigateTo({
+      url: '../detailArticles/detailArticle?id=' + e.detail.id
+    })
+
+    console.log(e.detail.id);
   },
 
   bannerTap: function(e) {

@@ -1,0 +1,37 @@
+<!--pages/login/login.wxml-->
+
+<view class='container'>
+  <view class='tab'>
+    <view class="tab-item {{isCodeLogin ? '' : 'selected'}}" bindtap='updateLoginType' data-isCodeLogin='0' hover-class='hover'>账号登录</view>
+    <view class="tab-item {{isCodeLogin ? 'selected' : ''}}" bindtap='updateLoginType' data-isCodeLogin='1' hover-class='hover'>验证码登录</view>
+  </view>
+  <view wx:if="{{isCodeLogin}}" class='normal-login-content'>
+  
+  </view>
+  <view wx:else class='code-login-content'>
+    <view class='input-container'>
+      <input focus placeholder='请输入手机号'></input>
+    </view>
+
+    <view class='input-container'>
+      <input focus placeholder='请输入密码'></input>
+    </view>
+
+    <view class='left-right-button'>
+      <text>点击注册</text>
+      <text>忘记密码</text>
+    </view>
+
+    <view class='submit'>
+      <text>登录</text>
+    </view>
+
+    <view class='third-login'>
+      <text>--我们还可以使用一下一键登录--</text>
+      <view class='third'>
+        <image></image>
+      </view>
+    </view>
+
+  </view>
+</view>

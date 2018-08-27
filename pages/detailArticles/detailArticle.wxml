@@ -1,0 +1,12 @@
+<!--pages/detailArticle.wxml-->
+<import src='../../utils/wxParse/wxParse.wxml'/>
+<template is='wxParse' data="{{wxParseData:article.nodes}}"/>
+<view class='commment-bar'>
+  <view class='input-container'>
+    <input placeholder='请输入手机号' bindinput='inputUpdate' disabled bindtap='gotoComment'></input>
+  </view>
+  <view class='right-icons'>
+    <text bindtap='shareArticle'>分享</text>
+    <text bindtap='favoriteArticle'>喜欢</text>
+  </view>
+</view>

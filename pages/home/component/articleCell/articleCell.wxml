@@ -1,8 +1,8 @@
-<view class='container' hover-class='hover'>
+<view class='container' hover-class='hover' style="height:{{ifBigPic ? 500 : 280 }}rpx">
   <block wx:if="{{ifBigPic}}">
     <view class='top-bottom'>
       <view class='top'>
-        <image src="{{cellItem.logoBrowseUrl}}" mode="aspectFill"></image>
+        <image mode="widthFix" src="{{cellItem.logoBrowseUrl}}"></image>
       </view>
       <view class='bottom'>
         <text class='title'>{{cellItem.articleTitle}}</text>

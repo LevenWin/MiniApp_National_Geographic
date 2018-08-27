@@ -6,7 +6,7 @@
           <swiper class='swiper' circular autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}" bindchange='bannerChange'>
             <block wx:for="{{banners}}" wx:key="id">
               <swiper-item class='image'>
-                <image mode= "aspectFill" src="{{item.fileBrowseUrl}}" bindtap='bannerTap' data-id="{{item.url}}" class='banner-image'></image>
+                <image mode="widthFix" src="{{item.fileBrowseUrl}}" bindtap='bannerTap' data-id="{{item.url}}" class='banner-image'></image>
               </swiper-item>
             </block>
           </swiper>
@@ -25,7 +25,7 @@
         </block>
         <block wx:else>
           <view class='cell'>
-            <article-cell cellItem="{{item}}" hideBottomLine="{{index == articles.length }}">
+            <article-cell data-id="{{item.articleId}}" bindtap="tapAction" cellItem="{{item}}" hideBottomLine="{{index == articles.length-1 }}" ifBigPic = "{{index % 3 == 0 && index > 0}}">
             </article-cell>
           </view>
         </block>
@@ -36,7 +36,7 @@
   <block wx:else>
     <view class='image-list'>
       <view class='image-box' wx:for="{{articles}}" wx:key="id">
-        <image mode="aspectFill"  src="{{item.fileBrowseUrl}}" class="{{index%2 ? 'right-image':'left-image'}}"></image>
+        <image mode="widthFix"  src="{{item.fileBrowseUrl}}" class="{{index%2 ? 'right-image':'left-image'}}"></image>
       </view>
     </view>
     <view class='load-more'>

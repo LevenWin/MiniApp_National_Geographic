@@ -4,7 +4,7 @@
     <swiper class='swiper' duration="{{300}}" bindchange="bindchange" current="{{currentIndex}}">
       <block wx:for="{{dataList}}" wx:key="id">
         <swiper-item>
-          <article-list itemObj="{{item}}"></article-list>
+          <article-list itemObj="{{item}}" bind:clickItem='clickItem'></article-list>
         </swiper-item>
       </block>
     </swiper>

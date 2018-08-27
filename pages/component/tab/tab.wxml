@@ -1,7 +1,6 @@
   <view class='tab'>
-    <view class='line'></view>
     <view class="tab-item {{selectedIndex == index ? 'tab-item-selected' : ''}}" wx:for="{{tabs}}" bindtap='tapTab' data-index="{{index}}" wx:key="*this" hover-class='tab-item-hover'>
       <text> {{item}}</text>
     </view>
+    <view class='line'></view>
   </view>
-  <view class='slider'></view>

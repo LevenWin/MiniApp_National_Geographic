@@ -1,0 +1,29 @@
+<!--pages/comment/comment.wxml-->
+<scroll-view class='comment-container'>
+  <view wx:for="{{comments}}" class='comment-cell' wx:key="id" hover-class='hover'>
+    <view class='top'>
+      <view class='top-left'>
+        <image src="{{item.headImageUrl}}"></image>
+      </view>
+      <view class='top-right'>
+        <text class='userName'>hahahhaLevendsnj</text>
+        <text class='date'>{{item.ts}}</text>
+      </view>
+    </view>
+    <view class='bottom-text'>
+      <text>{{item.content}}</text>
+    </view>
+  </view>
+  <view wx:if="{{ifNoMore}}" class='noMore'>
+   <text>我可是有底线的</text>
+  </view>
+</scroll-view>
+
+<view class='commment-bar'>
+  <view class='input-container'>
+    <input placeholder='请输入手机号' bindinput='inputUpdate'></input>
+  </view>
+  <view class='right-icons'>
+    <text bindtap='sendComment'>发布</text>
+  </view>
+</view>

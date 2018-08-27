@@ -1,0 +1,17 @@
+<scroll-view class='main'>
+  <view class='header'>
+    <image></image>
+    <view class='login-info' bindtap='login'>
+      <text class='login'>登录</text>
+      <text class='signup'>注册</text>
+    </view>
+  </view>
+
+  <view wx:for="{{items}}" wx:key="*this" class='item' data-index="{{item}}" hover-class='hover' bindtap='tapItem'>
+    <view class='item-content'>
+      <text>{{item}}</text>
+      <view class='arrow'></view>
+    </view>
+  </view>
+
+</scroll-view>
